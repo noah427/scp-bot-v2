@@ -4,6 +4,8 @@ const random = require("./helper/random");
 const scp = require("./scraping/index");
 const scpEmbed = require("./helper/scp-embed");
 
+(require("./helper/keepAlive.js"))()
+
 const client = new discord.Client();
 
 client.on("ready", () => {
