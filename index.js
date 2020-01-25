@@ -47,7 +47,7 @@ async function retryRandom() {
   var cont = true;
   while (cont) {
     let scpP = await scp(random(1, 10000));
-    if (scpP.description != undefined) {
+    if (scpP.description != "not found") {
       cont = false;
       return scpP;
     }
